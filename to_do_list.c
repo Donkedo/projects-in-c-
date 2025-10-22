@@ -24,12 +24,11 @@ int main()
     {
         printf("enter the task %d: ", i);
         fgets(task, sizeof(task), stdin);
-        if (strcmp(task, "exit\n") == 0)
-        {
+        if (strcasecmp(task, "exit\n") == 0)
             break;
-        }
         fprintf(file, "Task %d: %s", i, task);
     }
     fclose(file);
     return 0;
 }
+
